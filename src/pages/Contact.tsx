@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import GoogleMap from "@/components/GoogleMap";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -197,6 +198,14 @@ const Contact = () => {
                 </CardContent>
               </Card>
             </div>
+          </div>
+
+          {/* Map Section */}
+          <div className="mt-16">
+            <h2 className="text-3xl font-bold text-center text-wellness-sage mb-8">
+              Où Nous Trouver
+            </h2>
+            <GoogleMap />
           </div>
 
           {/* Additional Information */}

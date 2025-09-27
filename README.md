@@ -1,73 +1,147 @@
-# Welcome to your Lovable project
+# Zen Data Miner - Wellness & Therapy Center
 
-## Project info
+A modern, responsive website for a wellness and therapy center specializing in holistic healing services. The site showcases various therapeutic services including massage therapy, traditional Chinese medicine, and wellness treatments.
 
-**URL**: https://lovable.dev/projects/ad16cc95-9af6-4f91-969a-e10b22149b1f
+## 🌿 About
 
-## How can I edit this code?
+Zen Data Miner is a professional wellness center website that provides information about therapeutic services, pricing, training programs, and contact details. The site features a clean, modern design with intuitive navigation and responsive layout optimized for all devices.
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+### Core Pages
+- **Home** - Welcome page with hero section and service overview
+- **Services** - Detailed information about therapeutic offerings
+- **Pricing** - Transparent pricing structure for all services
+- **Training** - Educational programs and formation opportunities
+- **Contact** - Contact information and location details
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ad16cc95-9af6-4f91-969a-e10b22149b1f) and start prompting.
+### Key Components
+- **Responsive Navigation** - Mobile-friendly navigation with hamburger menu
+- **Hero Section** - Engaging landing area with compelling visuals
+- **Service Cards** - Interactive cards showcasing different therapy services
+- **Google Maps Integration** - Embedded map for easy location finding
+- **Modern UI Components** - Built with shadcn/ui for consistent design
 
-Changes made via Lovable will be committed automatically to this repo.
+### Technical Features
+- **Fully Responsive** - Optimized for desktop, tablet, and mobile devices
+- **Modern Design** - Clean, professional aesthetic with Tailwind CSS
+- **Fast Loading** - Optimized with Vite build system
+- **Accessible** - Built with accessibility best practices
+- **SEO Friendly** - Proper meta tags and semantic HTML structure
 
-**Use your preferred IDE**
+## 🛠️ Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Frontend Framework**: React 18 with TypeScript
+- **Styling**: Tailwind CSS for utility-first styling
+- **UI Components**: shadcn/ui component library
+- **Build Tool**: Vite for fast development and optimized builds
+- **Icons**: Lucide React for consistent iconography
+- **Routing**: React Router DOM for navigation
+- **Package Manager**: Bun for fast package management
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Getting Started
 
-Follow these steps:
+### Prerequisites
+- Node.js 18+ or Bun runtime
+- Modern web browser
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. Clone the repository:
+```bash
+git clone https://github.com/FediMechergui/zen-data-miner.git
+cd zen-data-miner
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. Install dependencies:
+```bash
+# Using bun (recommended)
+bun install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Or using npm
+npm install
+```
+
+3. Start the development server:
+```bash
+# Using bun
+bun run dev
+
+# Or using npm
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to [http://localhost:5173](http://localhost:5173)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📋 Available Scripts
 
-**Use GitHub Codespaces**
+- `dev` - Start development server with hot reload
+- `build` - Build the project for production
+- `preview` - Preview the production build locally
+- `lint` - Run ESLint to check code quality
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📁 Project Structure
 
-## What technologies are used for this project?
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui components
+│   ├── EmbeddedMap.tsx # Google Maps integration
+│   ├── GoogleMap.tsx   # Map component
+│   ├── Hero.tsx        # Hero section component
+│   ├── Navigation.tsx  # Navigation component
+│   └── ServiceCard.tsx # Service display cards
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+├── pages/              # Main application pages
+│   ├── Contact.tsx     # Contact information
+│   ├── Formations.tsx  # Training programs
+│   ├── Home.tsx        # Homepage
+│   ├── Index.tsx       # Main layout
+│   ├── NotFound.tsx    # 404 page
+│   └── Tarifs.tsx      # Pricing information
+└── assets/             # Images and media files
+```
 
-This project is built with:
+## 🎨 Design System
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The project uses a consistent design system with:
+- **Color Palette**: Earthy, calming colors suitable for wellness
+- **Typography**: Clean, readable fonts optimized for web
+- **Spacing**: Consistent spacing scale using Tailwind utilities
+- **Components**: Reusable UI components with shadcn/ui
 
-## How can I deploy this project?
+## 🌐 Browser Support
 
-Simply open [Lovable](https://lovable.dev/projects/ad16cc95-9af6-4f91-969a-e10b22149b1f) and click on Share -> Publish.
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-## Can I connect a custom domain to my Lovable project?
+## 📱 Mobile Optimization
 
-Yes, you can!
+The website is fully optimized for mobile devices with:
+- Responsive grid layouts
+- Touch-friendly navigation
+- Optimized images
+- Mobile-first design approach
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🤝 Contributing
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+For any questions or inquiries about the website, please visit the Contact page or reach out through the provided contact information on the site.
+
+---
+
+Built with ❤️ for wellness and healing

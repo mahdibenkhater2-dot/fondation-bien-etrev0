@@ -7,16 +7,16 @@ import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import GoogleMap from "@/components/GoogleMap";
+import EmbeddedMap from "@/components/EmbeddedMap";
 
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -25,19 +25,21 @@ const Contact = () => {
       title: "Message envoyé !",
       description: "Nous vous répondrons dans les plus brefs délais.",
     });
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   return (
     <div className="min-h-screen">
-      <Hero 
+      <Hero
         title="Contact"
         subtitle="Nous sommes là pour vous accompagner dans votre parcours bien-être"
       />
@@ -50,18 +52,22 @@ const Contact = () => {
               <h2 className="text-3xl font-bold text-wellness-sage mb-8">
                 Nos Coordonnées
               </h2>
-              
+
               <div className="space-y-6">
                 <Card className="bg-gradient-card shadow-soft">
                   <CardHeader>
                     <div className="flex items-center space-x-3">
                       <Phone className="w-6 h-6 text-wellness-sage" />
-                      <CardTitle className="text-wellness-sage">Téléphone</CardTitle>
+                      <CardTitle className="text-wellness-sage">
+                        Téléphone
+                      </CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
                     <p className="text-lg font-semibold">07.81.99.10.44</p>
-                    <p className="text-sm text-muted-foreground">Disponible du lundi au vendredi</p>
+                    <p className="text-sm text-muted-foreground">
+                      Disponible du lundi au vendredi
+                    </p>
                   </CardContent>
                 </Card>
 
@@ -69,12 +75,18 @@ const Contact = () => {
                   <CardHeader>
                     <div className="flex items-center space-x-3">
                       <Mail className="w-6 h-6 text-wellness-sage" />
-                      <CardTitle className="text-wellness-sage">Email</CardTitle>
+                      <CardTitle className="text-wellness-sage">
+                        Email
+                      </CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-lg font-semibold">fondation.bienensemble@gmail.com</p>
-                    <p className="text-sm text-muted-foreground">Réponse sous 24h</p>
+                    <p className="text-lg font-semibold">
+                      fondation.bienensemble@gmail.com
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Réponse sous 24h
+                    </p>
                   </CardContent>
                 </Card>
 
@@ -82,7 +94,9 @@ const Contact = () => {
                   <CardHeader>
                     <div className="flex items-center space-x-3">
                       <MapPin className="w-6 h-6 text-wellness-sage" />
-                      <CardTitle className="text-wellness-sage">Localisation</CardTitle>
+                      <CardTitle className="text-wellness-sage">
+                        Localisation
+                      </CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -95,14 +109,22 @@ const Contact = () => {
                   <CardHeader>
                     <div className="flex items-center space-x-3">
                       <Clock className="w-6 h-6 text-wellness-sage" />
-                      <CardTitle className="text-wellness-sage">Horaires</CardTitle>
+                      <CardTitle className="text-wellness-sage">
+                        Horaires
+                      </CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-1">
-                      <p className="text-sm"><strong>Lundi - Vendredi :</strong> 9h00 - 18h00</p>
-                      <p className="text-sm"><strong>Samedi :</strong> 9h00 - 16h00</p>
-                      <p className="text-sm"><strong>Dimanche :</strong> Fermé</p>
+                      <p className="text-sm">
+                        <strong>Lundi - Vendredi :</strong> 9h00 - 18h00
+                      </p>
+                      <p className="text-sm">
+                        <strong>Samedi :</strong> 9h00 - 16h00
+                      </p>
+                      <p className="text-sm">
+                        <strong>Dimanche :</strong> Fermé
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -114,10 +136,12 @@ const Contact = () => {
               <h2 className="text-3xl font-bold text-wellness-sage mb-8">
                 Envoyez-nous un Message
               </h2>
-              
+
               <Card className="bg-gradient-card shadow-soft">
                 <CardHeader>
-                  <CardTitle className="text-wellness-sage">Formulaire de Contact</CardTitle>
+                  <CardTitle className="text-wellness-sage">
+                    Formulaire de Contact
+                  </CardTitle>
                   <CardDescription>
                     Remplissez ce formulaire et nous vous répondrons rapidement.
                   </CardDescription>
@@ -148,7 +172,7 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-                    
+
                     <div>
                       <Label htmlFor="email">Email *</Label>
                       <Input
@@ -187,7 +211,7 @@ const Contact = () => {
                       />
                     </div>
 
-                    <Button 
+                    <Button
                       type="submit"
                       size="lg"
                       className="w-full bg-wellness-sage hover:bg-wellness-sage/90 text-white"
@@ -205,7 +229,7 @@ const Contact = () => {
             <h2 className="text-3xl font-bold text-center text-wellness-sage mb-8">
               Où Nous Trouver
             </h2>
-            <GoogleMap />
+            <EmbeddedMap />
           </div>
 
           {/* Additional Information */}
@@ -219,21 +243,30 @@ const Contact = () => {
               <CardContent>
                 <div className="grid md:grid-cols-3 gap-6 text-center">
                   <div>
-                    <h4 className="font-semibold text-wellness-sage mb-2">Informations Personnalisées</h4>
+                    <h4 className="font-semibold text-wellness-sage mb-2">
+                      Informations Personnalisées
+                    </h4>
                     <p className="text-sm text-muted-foreground">
-                      Obtenez des conseils adaptés à votre situation et vos objectifs de bien-être.
+                      Obtenez des conseils adaptés à votre situation et vos
+                      objectifs de bien-être.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-wellness-sage mb-2">Devis sur Mesure</h4>
+                    <h4 className="font-semibold text-wellness-sage mb-2">
+                      Devis sur Mesure
+                    </h4>
                     <p className="text-sm text-muted-foreground">
-                      Recevez un devis personnalisé pour vos besoins spécifiques en formation ou séances.
+                      Recevez un devis personnalisé pour vos besoins spécifiques
+                      en formation ou séances.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-wellness-sage mb-2">Accompagnement Expert</h4>
+                    <h4 className="font-semibold text-wellness-sage mb-2">
+                      Accompagnement Expert
+                    </h4>
                     <p className="text-sm text-muted-foreground">
-                      Bénéficiez de l'expertise de nos professionnels diplômés et reconnus.
+                      Bénéficiez de l'expertise de nos professionnels diplômés
+                      et reconnus.
                     </p>
                   </div>
                 </div>

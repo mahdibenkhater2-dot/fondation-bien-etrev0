@@ -1,10 +1,10 @@
-# Zen Data Miner - Wellness & Therapy Center
+# Fondation Bien étre - Wellness & Therapy Center
 
 A modern, responsive website for a wellness and therapy center specializing in holistic healing services. The site showcases various therapeutic services including massage therapy, traditional Chinese medicine, and wellness treatments.
 
 ## 🌿 About
 
-Zen Data Miner is a professional wellness center website that provides information about therapeutic services, pricing, training programs, and contact details. The site features a clean, modern design with intuitive navigation and responsive layout optimized for all devices.
+Fondation Bien étre is a professional wellness center website that provides information about therapeutic services, pricing, training programs, and contact details. The site features a clean, modern design with intuitive navigation and responsive layout optimized for all devices.
 
 ## ✨ Features
 

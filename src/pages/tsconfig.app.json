@@ -1,10 +1,10 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "jsx": "react-jsx", // Si tu utilises React, sinon adapte (ex. "preserve" pour d'autres frameworks)
+    "jsx": "react-jsx",
     "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"] // Ajuste selon la structure de ton projet
+      "@/*": ["../*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

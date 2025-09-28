@@ -1,15 +1,16 @@
-import Hero from "@/components/Hero";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+import Hero from "../components/Hero";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
+import { Textarea } from "../components/ui/textarea";
+import { Label } from "../components/ui/label";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
-import { useToast } from "@/hooks/use-toast";
+import { useToast } from "../hooks/use-toast";
 import { useState } from "react";
-import  Calendar  from "../components/Calendrier";
+import { Calendar } from "../components/ui/calendar";
+
 
 type FormData = {
   name: string;
@@ -20,50 +21,52 @@ type FormData = {
   selectedDate?: string;
 };
 
-// Composant Calendrier intégré
+
 interface CalendrierProps {
-  onDateSelect: (date: string) => void;
-  selectedDate?: string;
+  onDateSelect: (date: string) => void
+  selectedDate?: string
 }
 
 const Calendrier = ({ onDateSelect, selectedDate }: CalendrierProps) => {
   const [date, setDate] = useState<Date | undefined>(
     selectedDate ? new Date(selectedDate) : undefined
-  );
+  )
 
   const handleDateSelect = (selectedDate: Date | undefined) => {
-    setDate(selectedDate);
+    setDate(selectedDate)
     if (selectedDate) {
-      const formattedDate = selectedDate.toISOString().split('T')[0];
-      onDateSelect(formattedDate);
+      const formattedDate = selectedDate.toISOString().split("T")[0]
+      onDateSelect(formattedDate)
     } else {
-      onDateSelect('');
+      onDateSelect("")
     }
-  };
+  }
 
   return (
     <div className="mt-1">
       <Label htmlFor="calendar">Choisir une date (optionnel)</Label>
-      <Calendar
-        mode="single"
-        selected={date}
-        onSelect={handleDateSelect}
-        className="rounded-md border mt-2"
-        disabled={(date) => date < new Date()}
-      />
+    <Calendar
+    mode="single"
+    selected={date}
+    onSelect={handleDateSelect}
+    className="rounded-md border mt-2"
+    disabled={(d: Date) => d < new Date()}
+    />
       {date && (
         <p className="text-sm text-muted-foreground mt-2">
-          Date sélectionnée : {date.toLocaleDateString('fr-FR', {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
+          Date sélectionnée :{" "}
+          {date.toLocaleDateString("fr-FR", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
           })}
         </p>
       )}
     </div>
-  );
-};
+  )
+}
+
 
 const Contact = () => {
   const { toast } = useToast();

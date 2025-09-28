@@ -124,3 +124,5 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+@import 'react-big-calendar/lib/css/react-big-calendar.css';
+
